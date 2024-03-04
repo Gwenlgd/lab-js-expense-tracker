@@ -45,24 +45,28 @@ class Budget {
 
   getTotalIncome() {
     let sum = 0;
-    if (this.entries.length === 0) {
-      return 0
-    }
 
     this.entries.forEach((entrie) => {
       if (entrie.type === "income") {
         sum += entrie.amount;
-        // console.log(sum)
-        return this.entries.push(sum);
       }
     });
+    return sum;
+  }
+  getTotalExpense() {
+    let totalExpense = 0;
+
+    this.entries.forEach((entrie) => {
+      if (entrie.type === "expense") {
+        totalExpense += entrie.amount;
+      }
+    });
+    return totalExpense;
   }
 
-  // items.forEach((item) => {
-  //   copyItems.push(item);
-  // });
+  getCurrentBalance() {
+
+  };
+
+
 };
-
-
-// getTotalExpense() { };
-// getCurrentBalance() { };
