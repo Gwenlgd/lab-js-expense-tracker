@@ -65,8 +65,8 @@ class Budget {
   }
 
   getCurrentBalance() {
-
-  };
-
-
+    const totalIncome = this.getTotalIncome();
+    const totalExpense = this.getTotalExpense();
+    return totalIncome - totalExpense;
+  }
 };
